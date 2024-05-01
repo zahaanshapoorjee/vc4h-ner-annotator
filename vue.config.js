@@ -1,8 +1,8 @@
 const webpack = require("webpack");
 
 module.exports = {
-  publicPath: "/ner-annotator/",
-  outputDir: "./docs/",
+  publicPath: process.env.NODE_ENV === 'production' ? '/ner-annotator/' : '/',
+  outputDir: './docs/',
 
   pluginOptions: {
     quasar: {
