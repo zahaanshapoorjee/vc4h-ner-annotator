@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/ner-annotator/*"
-to = "/ner-annotator/index.html"
-status = 200
-force = true
