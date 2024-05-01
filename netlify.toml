@@ -1,4 +1,13 @@
+# Redirect default Netlify behavior to serve "index.html" for all navigation routes
 [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+from = "/ner-annotator/*"
+to = "/ner-annotator/index.html"
+status = 200
+force = false  # "force = true" might override the rules for static files
+
+# Ensure that direct file requests are not redirected
+[[redirects]]
+from = "/ner-annotator/*"
+to = "/ner-annotator/:splat"
+status = 200
+force = true
